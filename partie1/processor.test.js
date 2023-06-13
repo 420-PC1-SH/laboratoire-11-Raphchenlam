@@ -20,4 +20,9 @@ describe ("Transmission processor", function () {
         let result = processor("9701::<489584872710>");
         expect(result.id).toEqual(9701);
     })
+    
+    test("object contains rawData attribute", function () {
+        let result = processor("9701::<489584872710>");
+        expect(result.rawData).not.toEqual(undefined);
+    })
 });
