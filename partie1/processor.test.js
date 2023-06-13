@@ -25,4 +25,9 @@ describe ("Transmission processor", function () {
         let result = processor("9701::<489584872710>");
         expect(result.rawData).not.toEqual(undefined);
     })
+    
+    test("rawData attribute in object doesn't contain < and >", function () {
+        let result = processor("9701::489584872710");
+        expect(result.rawData).toEqual(-1);
+    })
 });
