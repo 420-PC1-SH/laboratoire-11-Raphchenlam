@@ -2,9 +2,9 @@ function processor(transmission){
     if (transmission.indexOf("::") < 0){
         return -1
     }
-    let parts = transmission.split("::");
+    const parts = transmission.split("::");
     return {
-        id: parts[0]
+        id: Number(parts[0])
     };
 }
 
