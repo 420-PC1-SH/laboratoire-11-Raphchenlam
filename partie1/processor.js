@@ -4,7 +4,8 @@ function processor(transmission){
     }
     const parts = transmission.split("::");
     return {
-        id: Number(parts[0])
+        id: Number(parts[0]),
+        rawData: parts[1]
     };
 }
 
